@@ -113,7 +113,12 @@ public class TestAlphaStone {
   @Test
   public void shouldReturnFindusInTurn(){
     assertThat(game.getPlayerInTurn(), is(Player.FINDUS));
+  }
 
+  @Test
+  public void shouldReturnPeddersenInTurn(){
+    game.endTurn();
+    assertThat(game.getPlayerInTurn(), is(Player.PEDDERSEN));
   }
 
 }
