@@ -8,5 +8,7 @@
 - Card Uno has attributes (1,1,1)
 - When Findus plays Uno, Then it is allowed (Status.OK), and Then minion Uno appears at index 0 on the field.
 - When Peddersen plays Dos, Then the mana available is two less.
-- When Findus plays a card, Then Peddersen still has 3 cards in his hand.
+- ~~When Findus plays a card, Then Peddersen still has 3 cards in his hand~~.
+- When Findus plays a card, then findus should have one less card in hand
+- When Findus plays Uno, then Findus should no longer have Uno in hand 
 - 

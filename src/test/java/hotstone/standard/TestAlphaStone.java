@@ -99,4 +99,11 @@ public class TestAlphaStone {
     assertThat(game.getPlayerInTurn(), is(Player.PEDDERSEN));
   }
 
+  @Test
+  public void peddersenShouldHave3CardsAfterFindusPlaysOne(){
+    Card card = game.getCardInHand(Player.FINDUS, 0);
+    game.playCard(Player.FINDUS, card);
+    assertThat(game.getHandSize(Player.PEDDERSEN), is(3));
+  }
+
 }
