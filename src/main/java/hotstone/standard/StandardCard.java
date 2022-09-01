@@ -12,17 +12,17 @@ public class StandardCard implements hotstone.framework.Card {
 
     @Override
     public int getManaCost() {
-        return 0;
+        return 2; //FAKE-IT
     }
 
     @Override
     public int getAttack() {
-        return 0;
+        return 2; //FAKE-IT
     }
 
     @Override
     public int getHealth() {
-        return 0;
+        return 2; //FAKE-IT
     }
 
     @Override
