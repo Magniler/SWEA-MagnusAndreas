@@ -110,4 +110,10 @@ public class TestAlphaStone {
     assertThat(l.get(0), is(not("Bumse")));
   }
 
+  @Test
+  public void shouldReturnFindusInTurn(){
+    assertThat(game.getPlayerInTurn(), is(Player.FINDUS));
+
+  }
+
 }
