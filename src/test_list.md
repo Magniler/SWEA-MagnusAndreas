@@ -1,8 +1,10 @@
 - ~~Given an initialized game, Findus is player in turn~~
-- When Findus ends its turn, it is Peddersen in turn
-- Findus should have three cards in hand, Tres at index 0, Dos at index 1, and Uno at index 2.
+- ~~When Findus ends its turn, it is Peddersen in turn~~
+- ~~Findus should have three cards in hand, Tres at index 0~~
+- Findus should haveDos at index 1and Uno at index 2.
 - Card Dos has attributes (2,2,2)
 - When Findus plays Uno, Then it is allowed (Status.OK), and Then minion Uno appears at index 0 on the field.
 - When Peddersen plays Dos, Then the mana available is two less.
 - When Findus plays a card, Then Peddersen still has 3 cards in his hand.
 - After turn 1 Peddersen should be in turn. 
+- 

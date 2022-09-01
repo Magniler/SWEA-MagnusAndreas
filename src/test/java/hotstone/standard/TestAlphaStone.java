@@ -76,7 +76,7 @@ public class TestAlphaStone {
     Card card = game.getCardInHand(Player.FINDUS, 0);
     // Then is it Tres
     // ENABLE TO START TDD'ing
-    // assertThat(card.getName(), is(GameConstants.TRES_CARD));
+    assertThat(card.getName(), is(GameConstants.TRES_CARD));
   }
 
   /** REMOVE ME. Not a test of HotStone, just an example of the
@@ -117,6 +117,7 @@ public class TestAlphaStone {
 
   @Test
   public void shouldReturnPeddersenInTurn(){
+    //After 1 turn, it should be Peddersens turn if Findus started
     game.endTurn();
     assertThat(game.getPlayerInTurn(), is(Player.PEDDERSEN));
   }
