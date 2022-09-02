@@ -12,7 +12,7 @@ public class StandardCard implements hotstone.framework.Card {
 
     @Override
     public String getName() {
-        return GameConstants.TRES_CARD; //FAKE IT
+        return card_name;
     }
 
     @Override

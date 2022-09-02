@@ -48,6 +48,11 @@ public class StandardHotStoneGame implements Game {
   private ArrayList<Card> peddersenHand = new ArrayList<>();
   private Player playerInTurn = Player.FINDUS;
 
+  public StandardHotStoneGame(){
+    findusHand.add(new StandardCard(GameConstants.TRES_CARD));
+    findusHand.add(new StandardCard(GameConstants.DOS_CARD));
+    findusHand.add(new StandardCard(GameConstants.UNO_CARD));
+  }
 
   @Override
   public Player getPlayerInTurn() {
@@ -76,7 +81,6 @@ public class StandardHotStoneGame implements Game {
 
   @Override
   public Card getCardInHand(Player who, int indexInHand) {
-    findusHand.add(new StandardCard(GameConstants.TRES_CARD)); //FAKE IT
     if (who.equals(Player.FINDUS)){
       return findusHand.get(indexInHand);
     }
