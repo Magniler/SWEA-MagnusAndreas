@@ -66,22 +66,27 @@ public class TestAlphaStone {
   // and pushing the rest of the cards 1 position
   // 'down'
   @Test
-  public void shouldHaveUnoInitially() {
+  @Disabled
+  public void shouldHaveUnoDosTresIntially() {
     // Given a game, Findus has 3 cards in hand
     int count = game.getHandSize(Player.FINDUS);
     assertThat(count, is(3));
     // And these are ordered Tres, Dos, Uno in slot 0,1,2
 
     // Given card 0 in the hand
-    Card card = game.getCardInHand(Player.FINDUS, 0);
+    Card cardTres = game.getCardInHand(Player.FINDUS, 0);
+    Card cardDos = game.getCardInHand(Player.FINDUS, 1);
+    Card cardUno = game.getCardInHand(Player.FINDUS, 2);
     // Then is it Tres
     // ENABLE TO START TDD'ing
-    assertThat(card.getName(), is(GameConstants.TRES_CARD));
+    assertThat(cardTres.getName(), is(GameConstants.TRES_CARD));
+    assertThat(cardDos.getName(), is(GameConstants.DOS_CARD));
+    assertThat(cardUno.getName(), is(GameConstants.UNO_CARD));
   }
 
   @Test
   public void dosHasTwoTwoTwo(){
-    Card card_dos = new StandardCard();
+    Card card_dos = new StandardCard(GameConstants.DOS_CARD);
     assertThat(card_dos.getAttack(), is(2));
     assertThat(card_dos.getHealth(), is(2));
     assertThat(card_dos.getManaCost(), is(2));
@@ -104,6 +109,12 @@ public class TestAlphaStone {
     Card card = game.getCardInHand(Player.FINDUS, 0);
     game.playCard(Player.FINDUS, card);
     assertThat(game.getHandSize(Player.PEDDERSEN), is(3));
+  }
+
+  @Test
+  public void shouldReturnListOfCards(){
+    Iterable<? extends Card> hand = game.getHand(Player.FINDUS);
+    assertThat(hand.getClass(), is(ArrayList.class));
   }
 
 }

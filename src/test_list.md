@@ -1,8 +1,8 @@
 - ~~Given an initialized game, Findus is player in turn~~
 - ~~When Findus ends its turn, it is Peddersen in turn~~
 - ~~Findus should have three cards in hand, Tres at index 0~~
-- Findus should haveDos at index 1and Uno at index 2.
-- ~~Card Dos has attributes (2,2,2)~~
+- When game is loaded Findus should have Dos at index 1 and Uno at index 2.
+- ~~getHand should return a list of cards~~
 - Card Tres is different from card Dos
 - Card Tres has attributes (3,3,3)
 - Card Uno has attributes (1,1,1)

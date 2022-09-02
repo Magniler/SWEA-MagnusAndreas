@@ -1,9 +1,14 @@
 package hotstone.standard;
 
+import hotstone.framework.Card;
 import hotstone.framework.Player;
 
 public class StandardCard implements hotstone.framework.Card {
 
+    String card_name;
+    public StandardCard(String card_name){
+        this.card_name = card_name;
+    }
 
     @Override
     public String getName() {
