@@ -66,7 +66,6 @@ public class TestAlphaStone {
   // and pushing the rest of the cards 1 position
   // 'down'
   @Test
-  @Disabled
   public void shouldHaveUnoDosTresIntially() {
     // Given a game, Findus has 3 cards in hand
     int count = game.getHandSize(Player.FINDUS);
@@ -112,9 +111,16 @@ public class TestAlphaStone {
   }
 
   @Test
-  public void shouldReturnListOfCards(){
+  public void shouldReturnList(){
     Iterable<? extends Card> hand = game.getHand(Player.FINDUS);
     assertThat(hand.getClass(), is(ArrayList.class));
+  }
+
+  @Test
+  public void shouldReturnCardType(){
+    Card cardInHand = game.getCardInHand(Player.FINDUS,0);
+    assertThat(cardInHand.getClass(), is(StandardCard.class));
+
   }
 
 }

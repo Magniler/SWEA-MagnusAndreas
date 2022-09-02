@@ -3,6 +3,8 @@
 - ~~Findus should have three cards in hand, Tres at index 0~~
 - When game is loaded Findus should have Dos at index 1 and Uno at index 2.
 - ~~getHand should return a list of cards~~
+- ~~Test that getCardInHand returns a card~~
+- getCardInHand(0) and getCardInHand(1) is different cards
 - Card Tres is different from card Dos
 - Card Tres has attributes (3,3,3)
 - Card Uno has attributes (1,1,1)
